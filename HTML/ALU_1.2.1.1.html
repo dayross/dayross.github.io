@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ALU
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Unidad Aritmética Lógica (ALU). </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                    <p> ALU (arithmetic Logic Unit) es un circuito digital qué realiza como su nombre lo indica las operaciones aritméticas ilógicas entre los datos de un circuito; suma, resta, divide y multiplica, así como establece comparaciones lógicas a través de las condiciones lógicas “sí”, “no”, y ”o”. </p>
+                    <p> Todos los procesadores incluyen al menos una ALU que varía su poder y complejidad según su finalidad. </p>
+                    <p> Además de los operadores lógicos y aritméticos, la ALU cuenta con una serie de registros para almacenar los datos, y bits de información sobre los resultados. </p>
+                    <p><font class="textoGral"> Operaciones de la ALU: </font></p>
+                    <p> Con respecto a cualquier procesador, las instrucciones involucran operaciones sobre un operando, o entre dos de ellos, estando uno de los mismos almacenado en el registro acumulador que es el registro de trabajo de cualquier ALU. </p>
+                    <p> El tipo de operaciones que puede realizar una ALU, puede resumirse así: </p>
+                    <ol>
+                        <li> Suma aritmética</li>
+                        <li> Resta aritmética (complemento a dos)</li>
+                        <li> Operaciones lógicas (producto y suma lógica, comparación, complementación, enmascaramiento)</li>
+                        <li> Desplazamiento o Rotación </li>
+                        <li> Transferencias</li>
+                    </ol>
+                    <img src="../MEDIA/alu.jpg">
+                    <p> Algunas instrucciones están referidas al contenido del registro acumulador en su totalidad, y otras algunos Bits, correspondiente a una palabra de datos que se desea modificar. </p>
+                    <p> El circuito ALU es simplemente un operador, es decir, sólo realiza operaciones. La ALU no toma decisiones. </p>
+                    <p> Las entradas deben contener tanto la magnitud como el signo que corresponda a la operación. </p>
+                    <p> La ALU requiere de un mecanismo de control que le permita saber el tipo de operación a realizar. </p>
+                    <p> <font class="textoGral">Partes de la ALU: </font></p>
+                    <ul>
+                        <li>Sumador/restador</li>
+                        <li>Operadores lógicos (AND, OR, XOR, NOT)</li>
+                        <li>Un acumulador y un registro auxiliar</li>
+                        <li>Un registro de salida</li>
+                        <li>Señales de control que indiquen las operaciones a realizar</li>
+                        <li>Registro de banderas</li>
+                    </ul>
+                    <p> La ALU deberá contra con un circuito de control que le permita: </p>
+                    <ol>
+                        <li>Identificar la operación a realizar</li>
+                        <li>Administrar los recursos internos</li>
+                        <li>Generar banderas</li>
+                    </ol>
+                    <p> Las computadoras más modernas, que incluyen procesadores de múltiples núcleos, incorporan a su vez múltiples dispositivos ALU, que son más complejos y con una mayor potencia. </p>
+
+
+            </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

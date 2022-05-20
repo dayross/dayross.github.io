@@ -1,0 +1,298 @@
+/* Archivo de CSS que se usará para TODAS
+las paginas del proyecto de arquitectura */
+
+/* Autor Diana Rocío Cerda Zapata */
+
+
+/** partes del css que serán generales para todas las paginas */
+
+/** division de la barra que esta arriba */
+nav.barra
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 50px;
+    background-color: #530D0D;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #EBEAF0;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+nav.fondo
+{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    height: fit-content;
+    background-color: #530D0D;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #EBEAF0;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 5px;
+    line-height: 25px;
+}
+
+/** etiqueta de a para que no cambie el color */
+a.link
+{
+    color:#AF2A45;
+    text-decoration: none;
+}
+
+button.bInicio
+{
+    border: none;
+    width: fit-content;
+    height: 50px;
+    padding: 20px;
+    float:left;
+    background-color: #530D0D;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #EBEAF0;
+    font-size: 16px;
+}
+
+/** body de todos los que voy a usar */
+body.body_de_todos_los_temas
+{
+    width: 100%;
+    height: 100%;
+    background-image: url(../MEDIA/tecFachada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    line-height: 25px;
+    word-wrap: break-word;
+    text-align: justify;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+/** overlay para que no se vea la imagen muy nitida */
+div.blackOverlay
+{
+    width: fit-content;
+    height:max-content;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-position: center;
+    background-repeat: repeat;
+}
+
+/** division donde ira el titulo, centrado */
+div.centro
+{
+    margin: auto;
+    width: fit-content;
+    height: 200px;
+    padding-top:150px;
+    text-align: center;
+}
+
+/** division donde va el texto */
+div.general
+{
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    text-align: justify;
+    word-wrap: break-word;
+    line-height: 30px;
+}
+
+/** division que da estilo a la caja del dropdown*/
+div.caja
+{
+    display: none;
+    position: absolute;
+    background-color: #D2D1D6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/** division que da estilo al texto dentro de la caja del dropdown */
+.caja a
+{
+    padding: 12px 16px;
+    display: block;
+}
+
+/**div para el dropdown menu */
+div.drop
+{
+    display: inline-block;
+    position: relative;
+}
+
+/** div que será el fondo de cada seccion de la unidad para que se vea bonitp*/
+div.cuadro
+{
+    width: fit-content;
+    height: fit-content;
+    padding: 35px;
+    background-color: #daf5f98a;
+}
+
+/** texto de titulos grandes */
+font.titulo
+{
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:#406017;
+}
+
+/** division del texto general, como descripcion */
+font.textoGral
+{
+    font-size: 20px;
+    color:#530D0D;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+/**division del texto pequeño que va en la foto y en las redes */
+font.textoPequeño
+{
+    font-size: 16px;
+    color:#93A535;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+
+/** texto util para subtitulado */
+font.subtitulo
+{
+    font-size: 36px;
+    color: #93A535;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+/** texto como gral, pero en color rosa */
+font.textoUnidad
+{
+    font-size: 18px;
+    color:#AF2A45;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+
+/** Cambia el color de los links del dropdown cuando tiene el mouse encima */
+.caja a:hover, .cambiaColor , .arqui:hover  {
+    background-color: #AF2A45;
+    color:#D2D1D6;
+}
+
+/** Muestra el menu cuando tiene el mouse encima*/
+.drop:hover .caja 
+{
+    display: block;
+}
+
+/** Cambia el color del fondo Change the background color of the dropdown button when the dropdown content is shown */
+.drop:hover 
+{
+    background-color: #93A535;
+}
+
+.brillo:hover
+{
+    text-shadow: 1px 1px 50px rgb(110, 14, 127), 0px 0px 10px rgba(173, 20, 200, 0.796);
+}
+
+
+/*****
+/** PAGINA PRINCIPAL */
+/*****
+
+
+/* Body de la pagina principal */
+html, body.inicio
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-image: url(../MEDIA/fondo.jpg);
+    background-size: cover;
+    background-color: #EBEAF0;
+    line-height: 55px;
+}
+
+/* division donde esta la foto del tec */
+div.tituloImg
+{
+    
+    background-image: url(../MEDIA/tecfoto.jpg);
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+/** division que es el overlay del color porque aparently this sht aint
+working how its supposed to */
+div.overlay
+{
+    height: 700px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.698);
+}
+
+
+
+/** division donde ira la descripcion de la materia */
+div.desc
+{
+    width: 60%;
+    height: fit-content;
+    padding: 25px;
+    padding-left: 40px;
+}
+
+/** division del texto que esta en la imagen del tec */
+.txtImg
+{
+    text-align: center;
+    margin: auto;
+    padding-top: 250px;
+    padding-left: 80px;
+    
+}
+
+/** estilo del texto que ira encima de la imagen del tec */
+font.textoTitulo
+{
+    color: #F9DAE6;
+    font-size: 60px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+font.textoClaro
+{
+    font-size: 18px;
+    color:#A1A485;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+

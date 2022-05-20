@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Entrada / Salida
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Entrada / Salida </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                <p> Módulos de Entrada/Salida E/S </p>
+                <p> El intercambio de información entre componentes, computadoras y usuarios es realizado mediante dispositivos que denominamos de manera genérica periféricos. </p>
+                <p> Para hacer una operación entre el procesador y un periférico, es necesario conectar esos dispositivos a la computadora y gestionar de manera efectiva la transferencia de datos. </p>
+                <p> Estos módulos son las interfaces que tiene la computadora con el exterior y el objetivo que tiene es facilitar las operaciones de E/S entre los periféricos y la memoria o los registros del procesador. </p>
+                <p> Los módulos entrada/salida están conectados con el procesador y la memoria principal, y cada uno controla uno o más dispositivos externos. </p>
+                <p> La arquitectura de entrada/salida es su interfaz con el exterior, esta arquitectura se diseña de manera que permita una forma sistemática de controlar las interacciones con el mundo exterior y proporcione el sistema operativo la información que necesita para gestionar la actividad de entrada/salida. </p>
+                <p> Para gestionar las operaciones de entrada/salida es necesario un hardware y la ayuda de un software. </p>
+                <img src="../MEDIA/E_S.png" height="180">
+                <p> <font class=subtitulo>Técnicas de entrada/salida principales: </font> </p>
+                <p> <font class=textoGral> Entrada/salida programada. </font> </p>
+                <p> Para hacer la operación de entrada/salida entre el procesador y el módulo, el procesador ejecuta un programa que controla toda la operación de entrada/salida (programación, transferencia de datos y finalización). </p>
+                <p> A continuación, analizamos con más detalle en las transferencias de un dato: </p>
+                <p> <font class=textoGral> Sincronización. </font></p>
+                <p> Durante la sincronización, el procesador, como responsable de la transferencia, ejecuta un programa que mira constantemente el estado del periférico consultando el registro de estado del módulo de entrada/salida. </p>
+                <p> Este programa tiene un bucle que se ejecuta continuamente hasta que detecta el cambio de estado e indica que el periférico está preparado </p>
+                <p> Mientras se lleva a cabo la sincronización, el procesador está dedicado al 100% a esta tarea y, por lo tanto, no puede atender a otros procesos o aplicaciones. Si esta espera es muy larga, puede degradar el nivel de prestaciones de todo el sistema. Por lo tanto, es recomendable que las transferencias hechas utilizando esta técnica sean cortas y rápidas. </p>
+                <p> <font class=textoGral> Intercambio de dato. </font> </p>
+                <p> Durante el intercambio de datos, si es una operación de lectura (entrada), el procesador lee el registro de datos del módulo de entrada/salida para recoger el dato enviado por el periférico, y lo guardas memoria; si es una operación de escritura (salida), el procesador toma de la memoria el dato que queremos enviar al periférico y lo escribe en el registro de datos del módulo de entrada/salida. </p>
+                <p> Se produce bajo el control directo y continuo del programa que solicita la operación de entrada/salida, así como la entrada y salida programada con interrupciones, el procesador es responsable de extraer los datos de la memoria en una salida, y almacenar los datos en la memoria principal. El procesador tiene que estar un tiempo considerable hasta que el módulo en cuestión esté preparado para recibir o transmitir datos. </p>
+                <p> <font class=textoGral> Entrada/Salida mediante Interrupciones. </font> </p>
+                <p> El programa genera una orden de entrada/salida y después continúa ejecutándose hasta que el hardware lo interrumpe para indicar que la operación ha concluido. </p>
+                <p> La entrada y salida con interrupciones, aunque es más eficiente que la programada, también requiere la intervención activa del procesador para transferir los datos entre la memoria y el módulo de entrada/salida. </p>
+                <p> Esta técnica de entrada/salida pretende evitar que el procesador tenga que estar parado o haciendo trabajo improductivo mientras esperaba que el periférico esté preparado para hacer una nueva operación de entrada/salida y pueda aprovechar este tiempo para ejecutar otros programas.</p> 
+                <p> Utilizando la técnica de entrada/salida por interrupciones se descarga el módulo de entrada/salida de la responsabilidad de llevar a cabo la sincronización entre el periférico y el procesador. </p>
+                <p> Para utilizar esta técnica de entrada/salida en una computadora es necesario considerar tanto aspectos del software como del hardware. </p>
+                <p> Como parte del hardware, es necesario que la computadora disponga de una línea especial que tiene que formar parte del conjunto de líneas de control de voz del sistema y que denominamos línea de petición de interrupción (INT). </p>
+                <p> El módulo de entrada/salida avisa el procesador mediante esta línea indica que está preparado para hacer la transferencia. La señal INT la activa el módulo de entrada/salida y la recibe el procesador.</p>
+                <p> Es una señal activa a la baja. El procesador debe tener un punto de conexión de entrada por donde llegarán las interrupciones y el módulo de entrada/salida debe tener un punto de conexión de salida por dónde generará las interrupciones. </p>
+                <p> <font class=textoGral> E/S Acceso directo a memoria (DMA). </font> </p>
+                <p> Un procesador específico toma el control de la operación para transferir un bloque de datos. </p>
+                <p> El módulo DMA es capaz de imitar al procesador y, capaz de transferir datos desde memoria a través del bus del sistema. </p>
+                <p> El módulo de medida debe utilizar el bus sólo cuando el procesador no lo necesita, o debe forzar al procesador hay que suspenda temporalmente su funcionamiento. </p>
+                <p> Un módulo de entrada/salida no es únicamente un conector mecánico que permite conectar el dispositivo al bus del sistema, contiene la lógica necesaria para permitir la comunicación entre los periféricos y el bus. </p>
+                <p> Esta técnica más eficiente para transferir bloques de datos, el DMA. </p>
+                <p> El procesador como programa la transferencia de un bloque de datos entre el periférico y la memoria en cargando a un nuevo elemento conectado al bus del sistema hacer toda la transferencia </p>
+                <p> Una vez acabada este nuevo elemento avisa al procesador, de esta manera, el procesador puede dedicar todo el tiempo que dura la transferencia del bloque a otras tareas. </p>
+                <p> Este nuevo elemento que gestiona toda la transferencia de datos entre el periférico y la memoria principal lo denominamos módulo o controlador de DNA o también en versiones más evolucionadas canal o procesador de entrada/salida. </p>
+                <p> Utilizando la técnica de entrada/salida por DMA se descarga al procesador de la responsabilidad de llevar a cabo la sincronización y el intercambio de datos entre el periférico y la memoria. </p>
+                <p> <font class=textoGral> Canales y Procesadores de Entrada/Salida</font> </p>
+                <p> El canal de entrada y salida representa una ampliación del concepto de Mia. Un canal de entrada y salida puede ejecutar instrucciones de entrada y salida, lo que le confiere un control completo sobre las operaciones de entrada y salida. </p>
+                <p> Un canal selector controla varios dispositivos de velocidad elevada y en un instante dado, se dedica a transferir datos a uno de esos dispositivos, es decir el canal de entrada y salida seleccionar un dispositivo y efectuar la transferencia de datos. Por cada dispositivo o pequeño grupo dispositivos es manejado por el módulo de entrada/salida o controlador, así el canal de entrada y salida se utiliza en lugar del CPU para controlar estos controladores. </p>
+                <p> Un canal multiplexor puede manejar la entrada y salida de varios dispositivos al mismo tiempo. Para dispositivos de velocidad reducida, un multiplex sor de byte acepta o transmite caracteres tan rápido como es posible a varios dispositivos. </p>                
+                </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

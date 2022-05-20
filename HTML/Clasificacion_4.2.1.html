@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Clasificación de computación paralela
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Clasificación </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                <p> Las computadoras paralelas se pueden clasificar de acuerdo con el
+                    nivel en el que el hardware soporta paralelismo. Esta clasificación es
+                    análoga a la distancia entre los nodos básicos de cómputo. Estos no
+                    son excluyentes entre sí, por ejemplo, los grupos de
+                    multiprocesadores simétricos son relativamente comunes.</p>
+                    <p> <b>Computación multinúcleo:</b> un procesador multinúcleo es un
+                    procesador que incluye múltiples unidades de ejecución
+                    (núcleos) en el mismo chip. Un procesador multinúcleo puede
+                    ejecutar múltiples instrucciones por ciclo de secuencias de
+                    instrucciones múltiples.</p>
+                    <img src="../MEDIA/multinucleo.jpeg width=500"> 
+                    <p> <b>Multiprocesamiento simétrico:</b> un multiprocesador simétrico
+                    (SMP) es un sistema computacional con múltiples
+                    procesadores idénticos que comparten memoria y se conectan
+                    a través de un bus. La contención del bus previene el escalado
+                    de esta arquitectura.</p>
+                    <img src="../media/simetrico.gif">
+                    <p> <b>Computación en clúster:</b> un clúster es un grupo de
+                    ordenadores débilmente acoplados que trabajan en estrecha
+                    colaboración, de modo que en algunos aspectos pueden
+                    considerarse como un solo equipo.</p>
+                    <img src="../media/cluster.jpeg" height="300">
+                    <p> <b>Procesamiento paralelo masivo:</b> tienden a ser más grandes
+                    que los clústeres, con «mucho más» de 100 procesadores. En
+                    un MPP, cada CPU tiene su propia memoria y una copia del
+                    sistema operativo y la aplicación.</p>
+                    <p> <b>Computación distribuida:</b> la computación distribuida es la
+                    forma más distribuida de la computación paralela. Se hace uso
+                    de ordenadores que se comunican a través de la Internet para
+                    trabajar en un problema dado.</p>
+                    <p> <b>Computadoras paralelas especializadas:</b> dentro de la
+                    computación paralela, existen dispositivos paralelos
+                    especializados que generan interés. Aunque no son específicos
+                    para un dominio, tienden a ser aplicables sólo a unas pocas
+                    clases de problemas paralelos.</p>
+                    <p> <b>Cómputo reconfigurable con arreglos de compuertas
+                    programables:</b> el cómputo reconfigurable es el uso de un
+                    arreglo de compuertas programables (FPGA) como
+                    coprocesador de un ordenador de propósito general.</p>
+                    <p> <b>Cómputo de propósito general en unidades de
+                    procesamiento gráfico (GPGPU):</b> es una tendencia
+                    relativamente reciente en la investigación de ingeniería
+                    informática. Los GPUs son co-procesadores que han sido
+                    fuertemente optimizados para procesamiento de gráficos por
+                    computadora.</p>
+                    <p> <b>Circuitos integrados de aplicación específica:</b> debido a que
+                    un ASIC (por definición) es específico para una aplicación
+                    dada, puede ser completamente optimizado para esa
+                    aplicación. Como resultado, para una aplicación dada, un
+                    ASIC tiende a superar a un ordenador de propósito general.</p>
+                    <p> <b>Procesadores vectoriales:</b> pueden ejecutar la misma
+                    instrucción en grandes conjuntos de datos. Tienen operaciones
+                    de alto nivel que trabajan sobre arreglos lineales de números o
+                    vectores.</p>
+                    
+                </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

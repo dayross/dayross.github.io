@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Estudio de CPU reales.
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Casos de Estudio de CPU reales. </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                <p> <font class=textoGral>Intel 8086: </font></p>
+                <p>Los registros del procesador, se usaban para contener los datos con que se estaba trabajando puesto que 
+                   el acceso a los registros era mucho más rápido que los accesos a la memoria. Se podian realizar 
+                   operaciones aritméticas y lógicas, comparaciones, entre otras. Los modos del 8086 eran indirectos por 
+                   registro, indexados o directos por registro. </p>
+                   <img src="../MEDIA/i8086.jpeg" height="200">
+                <p><font class=textoGral> Motorola 68000: </font></p>
+                <p>El mismo direccionamiento llevaba implícito el tipo de registro sobre el que trabajaba (direcciones o 
+                    datos). Estuvo basado en dos bancos de 8 registros de 32 bits. Un banco es de datos (Dn) y el otro 
+                    de punteros (An). Además contenía un contador de programa de 32 bits y un registro de estado de 16 bits. </p>
+                    <img src="../MEDIA/Motorola-68000.jpeg" width="400">
+                <p><font class=textoGral> Intel 80386: </font></p>
+                <p>Para este microprocesador existió un modo nuevo que requería un byte adicional denominado SIB 
+                    (escala, índice, base) que se añadía al byte de operandos, es útil para direccionar elementos de 
+                    vectores de longitudes diferentes en bucles. Era una alternativa a los modos autoindexados que esta 
+                    máquina no soportaba. </p>
+                    <img src="../MEDIA/KL_Intel_i386DX.jpg" height="200">
+
+                </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

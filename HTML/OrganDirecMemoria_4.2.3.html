@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Organización de direcciones de memoria
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Organización de direcciones de memoria </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                <p>La memoria principal en un ordenador en paralelo puede ser
+                    compartida —compartida entre todos los elementos de
+                    procesamiento en un único espacio de direcciones—, o distribuida
+                    —cada elemento de procesamiento tiene su propio espacio local de
+                    direcciones—. El término memoria distribuida se refiere al hecho de
+                    que la memoria se distribuye lógicamente, pero a menudo implica
+                    que también se distribuyen físicamente. La memoria distribuida-
+                    compartida y la virtualización de memoria combinan los dos
+                    enfoques, donde el procesador tiene su propia memoria local y
+                    permite acceso a la memoria de los procesadores que no son locales.
+                    Los accesos a la memoria local suelen ser más rápidos que los
+                    accesos a memoria no local.</p>
+                    
+                    <p> Las arquitecturas de ordenador en las que cada elemento de la
+                    memoria principal se puede acceder con igual latencia y ancho de
+                    banda son conocidas como arquitecturas de acceso uniforme a
+                    memoria (UMA). Típicamente, sólo se puede lograr con un sistema
+                    de memoria compartida, donde la memoria no está distribuida
+                    físicamente. Un sistema que no tiene esta propiedad se conoce como
+                    arquitectura de acceso a memoria no uniforme (NUMA). Los
+                    sistemas de memoria distribuidos tienen acceso no uniforme a la
+                    memoria.</p>
+                    
+                </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

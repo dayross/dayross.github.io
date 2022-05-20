@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sistemas de memoria distribuida (multicomputadores)
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Sistemas de memoria distribuida (multicomputadores) </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                <p>Cada procesador tiene su propia memoria y la comunicación se
+                    realiza por intercambio explícito de mensajes a través de una red.</p>
+                    
+                    <img src="../MEDIA/memoDist.png">
+                    
+                    <p> <font class=textoGral>Ventajas</font> </p>
+                    <ul>
+                    <li>El número de nodos puede ir desde algunas decenas hasta
+                    varios miles (o más).</li>
+                    <li>La arquitectura de paso de mensajes tiene ventajas sobre la de
+                    memoria compartida cuando el número de procesadores es
+                    grande.</li>
+                    <li>El número de canales físicos entre nodos suele oscilar entre
+                    cuatro y ocho.</li>
+                    <li>Esta arquitectura es directamente escalable y presenta un bajo
+                    coste para sistemas grandes.</li>
+                    <li>Un problema se especifica como un conjunto de procesos que
+                    se comunican entre sí y que se hacen corresponder sobre la
+                    estructura física de procesadores.</li>
+                    </ul>
+                    
+                    <p> <font class=textoGral>Desventajas</font> </p>
+                    <ul>
+                    <li>Se necesitan técnicas de sincronización para acceder a las
+                    variables compartidas.</li>
+                    <li>La contención en la memoria puede reducir significativamente
+                    la velocidad.</li>
+                    <li>No son fácilmente escalables a un gran número de
+                    procesadores.</li>
+                    </ul>                    
+                </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

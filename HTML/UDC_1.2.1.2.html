@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Unidad de Control
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Unidad de Control. </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                
+                <p> Es la parte “inteligente” del sistema microprocesador, de los CPU ́s. </p>
+                <p> Debido a que el procesador desarrolla sus tareas en función de las instrucciones secuenciadas que ha organizado e implementado el programador, es necesario que el sistema interprete cada tipo instrucción para actuar en consecuencia. </p>
+                <p> Es lo que se conoce también como decodificación de la instrucción. </p>
+                <p> Es el centro lógico de la computadora ya que los recursos de una computadora son administrados en la unidad de control, es esta unidad la que se encarga de dirigir el flujo de datos. </p>
+                 
+                <p> Las instrucciones del CPU se encuentran incorporadas en la unidad de control, estas instrucciones o conjunto de instrucciones enumeran todas las operaciones que un CPU puede realizar. </p>
+                <p> Cada instrucción es expresada en microcódigo. Antes de que un programa sea ejecutado, cada comando debe desglosarse en instrucciones que correspondan a las que están en las instrucciones del CPU. </p>
+                <p> Al momento de ejecutar el programa, el CPU lleva a cabo las instrucciones en orden convirtiéndolas en microcódigo. </p>
+                <p> A pesar de la complejidad que resulta del proceso, la computadora puede realizar este proceso a una velocidad increíble. Cuando un CPU es desarrollado, el conjunto de instrucciones tiene los mismos comandos que su predecesor, aparte de incluirle algunos nuevos. </p>
+                <p> Esto permite que el software escrito para un CPU trabaje con computadoras con procesadores más recientes, esta estrategia es llamada compatibilidad ascendente. </p>
+                <p> Esta característica permite ahorrar a los consumidores comprar un sistema nuevo cada vez que una parte del sistema es actualizada. Se le conoce compatibilidad decreciente o inversa, cuando un dispositivo del hardware o pieza del software puede interactuar con el mismo equipo y software que su predecesor. </p>
+                
+                <p> Hemos visto en el esquema general del CPU, la existencia de registros y de la ALU. </p>
+                <p> Precisamente, cada instrucción puede significar comunicaciones a través de los buses internos y externos. </p>
+                <p> Entre los bloques funcionales, para la transferencia de los datos binarios (datos propiamente dichos o direcciones). </p>
+                <p> Hay instrucciones simples y complejas, en el sentido que una simple puede significar la transferencia entre dos registros internos del sistema. </p>
+                <p> La modificación de los bits contenidos en un registro dado, pero puede haber instrucciones que impliquen varios movimientos o transferencias de bits o datos utilizando reiteradamente los buses internos o externos del sistema para la cual es necesario establecer una secuencia organizada para compartir los buses que son comunes a todos los bloques funcionales. </p>
+                <p> Estas transferencias secuenciales de los datos la realiza la unidad de control, precisamente señales de control a los distintos bloques. </p>
+                <p> A cada una de estas transferencias de datos que forma parte de una instrucción se la conoce como microinstrucción. </p>
+                
+                <p> El conjunto de instrucciones que conforman cada instrucción, vienen grabadas de fábrica en el chip del CPU, en una memoria de tipo ROM y por lo general no es accesible al programador. </p>
+                <p> Este tipo de sistema se denomina microprogramado. </p>
+                <p> Modelos (2.901 A de Advanced Micro Devices), que permiten el acceso a la ROM, para definir un propio juego de instrucciones, pero ello implica tener un conocimiento muy profundo de los detalles de los circuitos para obtener un funcionamiento óptimo.
+                <p> Los sistemas micro programables. </p>
+                <p> Puede darse el caso que cuando se está realizando una instrucción, antes de terminarla se salte a otra instrucción. </p>
+                <p> Esto puede darse según las señales de condición que esté recibiendo en ese momento la unidad de control. </p>
+                <p> Funciones de la unidad de control. </p>
+                <p> <font class="textoGral">Las funciones de comando que parten de la unidad de control: </font></p>
+                <ul>
+                    <li>Decodificación de las instrucciones. </li>
+                    <li>Sincronización de las tareas.</li>
+                    <li>Administración de los buses internos de comunicación del microprocesador.</li>
+                    <li>Manejo de las líneas de intercambio con el exterior (buses externos) que permiten la interacción del CPU en la memoria principal y los periféricos.</li>
+                    <li>Indicación a la ALU sobre las operaciones a realizar.</li>
+                </ul>
+                <img src="../MEDIA/unidad.jpg" height="300">
+                <p> Todas las funciones de comando que salen de la unidad de control se corresponden con las <font class="textoGral">señales de entrada a la unidad </font> que pueden ser: </p>
+                <ul>
+                    <li>Un código de instrucción que almacenado en el registro de entrada contiene la operación a ser ejecutada así como el modo de direccionamiento con que se obtiene el operando. </li>
+                    <li>Un secuenciador que a partir del reloj que posee el sistema realiza un conteo que permite localizar las instrucciones sucesivas que componen la instrucción. </li>
+                    <li>Un conjunto de condicionamientos que identifican a aquellos eventos que provocan alteraciones en la secuencia normal de un programa (interrupciones, saltos por condiciones del registro de estado). </li>
+                </ul>                
+            </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

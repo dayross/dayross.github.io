@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Arquitectura Segmentada
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Arquitectura Segmentada </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                Arquitectura Segmentada.
+                    <p>Es una de las tecnologías utilizadas para realizar la segmentación o paralelismo. Divide el procesador, 
+                    en etapas, procesa una instrucción diferente en cada una y trabaja con varias a la vez.</p>
+                    <p>Pueden trabajar de forma paralela, en diferentes instrucciones, utilizando una cola de instrucciones para 
+                    su comunicación, denominado entubamiento.</p>
+                    <p>La dependencia de datos y de control, que tiene como efecto la disminución del rendimiento del pipelining.</p>
+                    <p>La segmentación de cauce (pipelining) es una forma efectiva de organizar el hardware del CPU para realizar 
+                    más de una operación al mismo tiempo.</p>
+                    <p>Consiste en descomponer el proceso de ejecución de las instrucciones en fases o etapas que permitan una 
+                    ejecución simultánea.</p>
+                    <p>Explota el paralelismo entre las instrucciones de un flujo secuencial.</p>
+                    <p>La segmentación es una técnica de implementación por la cual se solapa la ejecución de múltiples instrucciones.</p>
+                    <p>La técnica de implementación clave utilizada para hacer CPU rápidas. La segmentación es como una línea de 
+                    ensamblaje: cada etapa de la segmentación completa una parte de la instrucción.</p>
+                    <p>Como en una línea de ensamblaje, la acción a realizar en una instrucción se descompone en partes más pequeñas, 
+                    cada una de las cuales necesita una fracción del tiempo necesario para completar la instrucción completa.</p>
+                    <p>Cada uno de estos pasos se define como etapa de la segmentación o segmento.</p>
+                    <p>Las etapas están conectadas, cada una a la siguiente, para formar una especie de cauce las instrucciones se 
+                    entran por un extremo, son procesadas a través de las etapas y salen por el otro. La productividad de la 
+                    segmentación está determinada por la frecuencia con que una instrucción salga del cauce.</p>
+                    <p>Como las etapas están conectadas entre sí, todas las etapas deben estar listas para proceder al mismo tiempo. </p>
+                    <p>El tiempo requerido para desplazar una instrucción, un paso, a lo largo del cauce es un ciclo máquina.</p>
+                    <p>La duración de un ciclo máquina está determinada por el tiempo que necesita la etapa más lenta (porque todas las
+                    etapas progresan a la vez).</p>
+                    <p>Con frecuencia, el ciclo máquina es un ciclo de reloj (a veces dos, o raramente más), aunque el reloj puede 
+                    tener múltiples fases.</p>                    
+                    <p>La mejora de velocidad debida a la segmentación es igual al número de etapas.</p>
+                    <p>La segmentación consigue una reducción en el tiempo de ejecución medio por instrucción.</p>
+                    <p>Esta reducción se puede obtener decrementando la duración del ciclo de reloj de la máquina segmentada o 
+                    disminuyendo el número de ciclos de reloj por instrucción, o haciendo ambas cosas.</p>
+                    <p>El mayor impacto está en el número de ciclos de reloj por instrucción, aunque el ciclo de reloj es, con 
+                    frecuencia, más corto en una máquina segmentada (especialmente en supercomputadores segmentados).</p>
+                    <p>La segmentación es una técnica de implementación, que explota el paralelismo entre las instrucciones de un 
+                    flujo secuencial. Tiene la ventaja sustancial que, de forma distinta a algunas técnicas de aumento de velocidad, 
+                    no es visible al programador.</p>
+                    
+                    <p>Tipos de cauces:</p>
+                    <ul>
+                        <li>Unifunción: ejecutan un único proceso. </li>
+                        <li>Multifunción: pueden ejecutar varios procesos:</li>
+                        <ul>
+                            <li>Estáticos: en un instante determinado sólo pueden ejecutar uno.</li>
+                            <li>Dinámicos: pueden ejecutar simultáneamente varios procesos.</li>
+                            <li>Lineal: a cada etapa sólo le puede seguir otra etapa concreta.</li>
+                            <li>No lineal: se pueden establecer recorridos complejos de las etapas.</li>
+                        </ul>
+                    </ul>
+                    <p> <font class="textoGral">Ciclos de Instrucción.</font></p>
+                    <p>Ejecución de instrucciones en 5 ciclos</p>
+                    <p>Etapas de cauce.</p>
+                    <p>Donde:</p>
+                    <p>&nbsp; &nbsp;<b>IF:</b> Búsqueda de una instrucción de la memoria.</p>
+                    <p><b>&nbsp; &nbsp;ID:</b> Búsqueda de registros y decodificación de instrucciones </p>
+                    <p><b>&nbsp; &nbsp;EXE:</b> Ejecución o cálculo de dirección</p>
+                    <p><b>&nbsp; &nbsp;MEM:</b> Acceso a la memoria de datos.</p>
+                    <p><b>&nbsp; &nbsp;WB:</b>Escribir datos en el archivo de registros</p>
+                    <img src="../MEDIA/cicloInstruccion.jpg">
+                    <p>La segmentación ayuda en la realización de una carga de trabajo.</p>
+                    <p>Realiza múltiples tareas simultáneamente utilizando diferentes recursos.</p>
+                    <p>La velocidad se incrementa si se aumenta el número de segmentos.</p>
+                    <p>La razón de segmentación está dada por el segmento más lento.</p>
+                    <p>El tiempo en llenar y vaciar los segmentos reduce la velocidad.</p>
+                    <p>Dedica unidades específicas del procesador a cada una de las partes del ciclo de instrucción y ejecutarlas 
+                    paralelamente.</p>
+                    <p>Mejora dramáticamente el rendimiento debido a que en los procesadores tienen etapas en el ciclo de instrucción.</p>
+                    <p>La unidad de control se subdivide en dos o más unidades funcionales, cada una encargada de llevar a cabo una 
+                    parte del ciclo de instrucción.</p>
+                    <p>Se comunican a través de una cola de instrucciones (Pipeline).</p>
+            </font>  
+            </div>
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Arquitectura de computadoras
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Modelos de Arquitectura de Computadoras </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                <p>Arquitectura de Computadoras.</p>
+
+                    <p>Es el diseño y la organización de un sistema para un equipo de cómputo.
+                    Es un modelo y descripción de cada función, así como los requerimientos y las implementaciones de diseño para varias
+                    partes del equipo de cómputo.</p>
+                    <p>Principalmente enfocamos en la Unidad Central de Procesamiento lo conocemos como (CPU) el cual trabaja 
+                    internamente y accede a las direcciones de memoria y a los sistemas de entrada salida, periféricos.</p>
+                    <p>También suele definirse como la selección e interconexión de los componentes de hardware para crear computadoras 
+                    según los requerimientos de funcionalidad, rendimiento y costo.</p>
+                    <p>El equipo de cómputo recibe y envía la información a través de los periféricos por medio de los canales de 
+                    distribución o buses (cableado físico de interconexión).</p>
+                    <p>El CPU se encarga de procesar la información que le llega al equipo de cómputo.</p>
+                    <p>El intercambio de información se tiene que hacer con los periféricos y el CPU.</p>
+                    <p>Todas aquellas unidades de un sistema exceptuando el CPU se denomina periférico, por lo que el equipo de cómputo 
+                    tiene dos partes bien diferenciadas, que son: el CPU (se encarga de ejecutar programas y que está compuesta 
+                    por la memoria principal, la (ALU) Unidad Aritmética Lógica y la (UC) unidad de control) y los periféricos 
+                    (que pueden ser de entrada, salida, entrada-salida y las interconexiones).</p>
+                    <br>
+                    <font class="subtitulo">Modelos de Arquitectura Clásicas.</font>
+                    <br>
+                    <p>Estas arquitecturas se desarrollaron en las primeras computadoras electromecánicas y de tubos de vacío.</p>
+                    <p>Hay dos arquitecturas distintas relacionadas con el uso y distribución de la memoria: Arquitectura de Jonh Von 
+                    Neumman y Arquitectura Harvard.</p>
+                    <br>
+                    <font class="textoGral">Modelo Von Neumann.</font>
+                    <br>
+                    <img src="../MEDIA/clasica_vonNeumann.png">
+                    <p>Tradicionalmente los sistemas con microprocesadores se basan en esta arquitectura, en la cual la unidad central 
+                    de proceso (CPU), está conectada a una memoria principal única (casi siempre sólo RAM) donde se guardan las
+                    instrucciones del programa y los datos. A dicha memoria se accede a través de un sistema interconexión de 
+                    buses único (control, direcciones y datos).</p>
+
+                    <p>En un sistema con arquitectura Von Neumann el tamaño de la unidad de datos o instrucciones está fijado por el 
+                    ancho del bus que comunica la memoria con la CPU. Así un microprocesador de 8 bits con un bus de 8 bits, 
+                    tendrá que manejar datos e instrucciones de una o más unidades de 8 bits (bytes) de longitud.</p>
+                    <p>Si tiene que acceder a una instrucción o dato de más de un byte de longitud, tendrá que realizar más de un 
+                    acceso a la memoria.</p>
+                    <p>El tener un único bus hace que el microprocesador sea más lento en su respuesta, ya que no puede buscar en 
+                    memoria una nueva instrucción mientras no finalicen las transferencias de datos de la instrucción anterior.</p>
+                    <p>Las computadoras digitales convencionales presentan un aspecto Von Neumann. Este modelo consta de cinco 
+                    componentes principales.</p>
+                    <ul>
+                    <li>Unidad de Memoria.</li>
+                    <li>Unidad de Entrada/Salida.</li>
+                    <li>Unidad de Control. Incluidos CPU.</li>
+                    <li>Unidad Aritmética Lógica. Incluida en CPU. </li>
+                    <li>Registros de Programas. Incluidos en CPU.</li>
+                    </ul>
+                
+                    <p>Las instrucciones provenientes del sistema de entrada, son almacenados por la memoria, procesados por la 
+                    ALU bajo la dirección de la unidad de control. Los resultados obtenidos son enviados a la unidad de salida.</p>
+                    <p>El programa almacenado es lo más importante en el modelo. Los programas se almacenan en la memoria del equipo 
+                    junto con los datos a procesar.</p>
+                    <p>En las computadoras de programa almacenado, el programa puede manipularse como si se tratara de datos. Este 
+                    concepto da origen a los compiladores, sistemas operativos y es la base de la gran versatilidad de las computadoras modernas.</p>
+                    <font class="textoGral">Limitaciones Von Neumann</font>
+                    <p>La longitud de las instrucciones por el bus de datos, que hace que el microprocesador tenga que realizar varios 
+                    accesos a memoria para buscar instrucciones complejas.</p>
+
+                    <p>La velocidad de operación a causa del bus único para datos e instrucciones que no deja acceder simultáneamente 
+                    a unos y otras, lo cual impide superponer ambos tiempos de acceso. </p>
+                    
+                    <br>
+                    <font class="textoGral">Modelo Harvard</font>
+                    <br>
+                    <img src="../MEDIA/clasica_harvard.svg" height="500px" width="800px">
+                    <p>Esta arquitectura utiliza los Micro controladores, tiene la unidad central de proceso (CPU) conectada a dos 
+                    memorias (una con las instrucciones y otra con los datos) por medio de dos buses diferentes.</p>
+                    <p>Una de las memorias contiene solamente las instrucciones del programa (Memoria de Programa), y la otrasólo 
+                    almacena datos (Memoria de Datos).</p>
+                    <p>Ambos buses son totalmente independientes lo que permite que la CPU pueda acceder de formaindependiente y 
+                    simultánea a la memoria de datos y a la de instrucciones.</p>
+                    <p>Como los buses son independientes estos pueden tener distintos contenidos en la misma dirección y también 
+                    distinta longitud.</p>
+                    <p>También la longitud de los datos y las instrucciones puede ser distinta, lo que optimiza el uso de la memoria 
+                    en general.</p>
+                    <p>Para un procesador de Set de Instrucciones Reducido, o RISC (Reduced Instrucción Set Computer), el set de 
+                    instrucciones y el bus de memoria de programa pueden diseñarse de tal manera que todas las instrucciones 
+                    tengan una sola posición de memoria de programa de longitud.</p>
+                    <p>Además, al ser los buses independientes, el CPU puede acceder a los datos para completar la ejecución de una 
+                    instrucción, y al mismo tiempo leer la siguiente instrucción a ejecutar.</p>
+                    <br>
+                    <p>El tamaño de las instrucciones no está relacionado con el de los datos, y por lo tanto puede ser 
+                    optimizado para que cualquier instrucción ocupe una sola posición de memoria de programa, logrando 
+                    así mayor velocidad y menor longitud de programa.</p>
+                    <p>El tiempo de acceso a las instrucciones puede superponerse con el de los datos, logrando una mayor velocidad en 
+                    cada operación.</p>
+                    <p>La principal desventaja de esta arquitectura; el bus de datos y direcciones único se convierte en un cuello de 
+                    botella por el cual debe pasar toda la información que se lee o se escribe a la memoria, obligando a que 
+                    todos los accesos a esta sean secuenciales.</p>
+                    <p>Limita el grado de paralelismo (acciones que se pueden realizar al mismo tiempo) y por lo tanto, el desempeño de 
+                    la computadora.</p>
+            </font>  
+            </div>
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

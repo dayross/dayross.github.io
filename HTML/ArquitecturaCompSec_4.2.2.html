@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Arquitectura de computadores secuenciales.
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Arquitectura de computadores secuenciales. </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                <p>A diferencia de los sistemas combinacionales, en los sistemas
+                    secuenciales, los valores de las salidas, en un momento dado, no
+                    dependen exclusivamente de los valores de las entradas en dicho
+                    momento, sino también dependen del estado anterior o estado
+                    interno. El sistema secuencial más simple es el biestable, de los
+                    cuales, el de tipo D (o cerrojo) es el más utilizado actualmente.</p>
+                    <p>El sistema secuencial requiere de la utilización de un dispositivo de
+                    memoria que pueda almacenar la historia pasada de sus entradas
+                    (denominadas variables de estado) y le permita mantener su estado
+                    durante algún tiempo, estos dispositivos de memoria pueden ser
+                    sencillos como un simple retardador o celdas de memoria de tipo
+                    DRAM, SRAM o multivibradores biestables también conocido
+                    como Flip-Flop.</p>
+                    
+                    <p> <font class=textoGral>Tipos de sistemas secuenciales</font> </p>
+                    <p> En este tipo de circuitos entra un factor que no se había considerado
+                    en los circuitos combinacionales, dicho factor es el tiempo, según
+                    como manejan el tiempo se pueden clasificar en: circuitos
+                    secuenciales síncronos y circuitos secuenciales asíncronos. </p>
+                    <ul>
+                    <li>Circuitos secuenciales asíncronos.</li>
+                    <p>En circuitos secuenciales asíncronos los cambios de estados ocurren
+                    al ritmo natural asociado a las compuertas lógicas utilizadas en su
+                    implementación, lo que produce retardos en cascadas entre los
+                    biestables del circuito, es decir no utilizan elementos especiales de
+                    memoria, lo que puede ocasionar algunos problemas de
+                    funcionamiento, ya que estos retardos naturales no están bajo el
+                    control del diseñador y además no son idénticos en cada compuerta
+                    lógica.</p>
+                    <li>Circuitos secuenciales síncronos.</li>
+                    <p> Los circuitos secuenciales síncronos solo permiten un cambio de
+                    estado en los instantes marcados o autorizados por una señal de
+                    sincronismo de tipo oscilatorio denominada reloj (cristal o circuito
+                    capaz de producir una serie de pulsos regulares en el tiempo), lo que
+                    soluciona los problemas que tienen los circuitos asíncronos
+                    originados por cambios de estado no uniformes dentro del sistema o
+                    circuito. </p>
+                    
+                </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

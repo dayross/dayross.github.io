@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Arquitectura Multiprocesamiento
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Arquitectura Multiprocesamiento </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            
+                <div class="desc">
+                    <font class="textoUnidad">
+                    <!== texto =>
+                
+                    <p>Se denomina multiprocesador a un computador que cuenta con dos o más microprocesadores (CPUs).</p>
+                    <p>El multiprocesador puede ejecutar simultáneamente varios hilos pertenecientes a un mismo proceso o bien a procesos
+                    diferentes.</p>
+                    <p>La arquitectura NUMA, donde cada procesador tiene acceso y control exclusivo a una parte de la memoria.</p>
+                    <p>La arquitectura SMP, donde todos los procesadores comparten toda la memoria.</p>
+                    <p>Para que un multiprocesador opere correctamente necesita un sistema operativo especialmente diseñado para ello.</p>
+                    <p>La mayoría de los sistemas operativos actuales poseen esta capacidad.</p>
+                    
+                    <p>Cuando se desea incrementar el desempeño más de lo que permite la técnica de segmentación (pipeline), se requiere 
+                    utilizar más de un procesador para la ejecución del  programa de aplicación.</p>
+                    <p>Los CPU de multiprocesamiento según Flynn se clasifican de la siguiente manera:</p>
+                    <ul>  
+                        <li>SISO - (Single Instruction, Single Operand) computadoras Monoprocesador</li>
+                        <li>SIMO - (Single Instruction, Multiple Operand) procesadores vectoriales, Exenciones MMX</li>
+                        <li>MISO - (Multiple Instruction, Single Operand) No implementado</li>
+                        <li>MIMO - (Multiple Instruction, Multiple Operand) sistemas SMP, Clusters, GPUs</li>
+                    </ul>
+                    <p>Los procesadores vectoriales, son computadoras pensadas para aplicar un mismo algoritmo numérico a una serie de 
+                    datos matriciales, en especial en la simulación de sistemas físicos complejos, tales como simuladores de clima, 
+                    explosiones atómicas, reacciones químicas, etc.</p>
+                                
+                    <p>Donde los datos son representados como grandes números de datos en forma matricial sobre los que se deben se 
+                    aplicar el mismo algoritmo numérico.</p>
+                    <p>La mayoría de los procesadores modernos incluye algunas instrucciones de tipo vectorial, tales como las 
+                    extensiones al conjunto de instrucciones tales como MMX y SSE. Estas instrucciones les permiten procesar flujos 
+                    multimedia más eficientemente.</p>
+                    <p>Los Procesadores Digitales de Señales (DSP), son procesadores especializados en el procesamiento de señales 
+                    tales como audio, vídeo, radar, sonar, radio, etc.</p>
+                    <p>Cuentan con instrucciones tipo vectorial que los hace muy aptos para dicha aplicación. Suelen utilizarse en 
+                    conjunto con un microcontrolador en dispositivos como reproductores de audio, reproductores de DVD y Blueray, 
+                    teléfonos celulares, sistemas de entretenimiento, sistemas de adquisición de datos, instrumentos médicos, controles 
+                    industriales, etc.</p>
+                    <p>En los sistemas SMP (Simetric Multiprocessing), varios procesadores comparten la misma memoria principal y 
+                    periféricos de Entrada /Salida, normalmente conectados por un bus común.</p>
+                                        
+                    <p>Se conocen como simétricos, ya que ningún procesador toma el papel de maestro y los demás de esclavos, sino que 
+                    todos tienen derechos similares en cuanto al acceso a la memoria y periféricos y ambos son administrados por el 
+                    sistema operativo.</p>
+                    <p>Pueden formarse con varios núcleos en un solo circuito integrado o con varios circuitos integrados en una misma
+                    tarjeta madre. La primera opción ha sido popularizada al hacerse más económicos los procesadores multinúcleo de los 
+                    principales fabricantes y con su uso en sistemas de gama  media y baja, e inclusive en teléfonos celulares y tabletas.</p>
+                    <p>La segunda opción fue la que se uso en un principio y sigue siendo usada en en estaciones de trabajo y en servidores 
+                    de alto rendimiento debido a que incrementa el poder computacional del sistema, pero también incrementa 
+                    considerablemente el costo del sistema.</p>
+                    <center>
+                        <img src="../MEDIA/segmentada.png" height="370" width="600">      
+                    </center>  
+                    <p><font class="subtitulo">Clusters</font></p>
+                    <p>Conjuntos de computadoras independientes conectadas en una red de área local o por un bus de interconexión y que 
+                    trabajan cooperativamente. Con un sistema de procesamiento paralelo o distribuido. Consta de un conjunto de 
+                    computadoras independientes, interconectadas entre sí, de tal manera que funcionan como un solo recurso computacional.</p>
+                    <p>Es clave en su funcionamiento contar con un sistema operativo y programas de aplicación capaces de distribuir el 
+                    trabajo entre las computadoras de la red.</p>
+                    <p>Este tipo de computadora paralela se ha vuelto muy popular por que permite usar los avances en los procesadores 
+                    comerciales que tienen una muy buena relación costo rendimiento y se puede incorporar rápidamente los avances que 
+                    proporciona las nuevas tecnologías en cuanto es económicamente viable.</p>
+                    <p>Sin embargo, se debe tener cuidado al implementar la aplicación, ya que si los datos que hay que pasar de un 
+                    procesador a otro son demasiados, el tiempo empleado en pasar información de un nodo a otro puede sobrepasar a la
+                    ganancia que se tiene al dividir el trabajo entre varios procesadores.</p>
+                    <center>
+                        <img src="../MEDIA/cluster.png">
+                    </center>
+                    <p><font class="subtitulo">Procesadores Gráficos</p></font>
+                    <p><font class="textoGral">(Graphics Processing Unit GPU)</p></font>
+                    <p>Sistemas diseñados originalmente para el procesamiento de gráficos, con múltiples procesadores vectoriales sencillos 
+                    compartiendo la misma memoria.</p>
+                    <p>La cual también puede ser accedida por el CPU. Por la gran cantidad de núcleos con los que cuenta, logran un 
+                    excelente desempeño al ejecutar algoritmos que se adaptan a ser paralelizados, a tal grado que muchas de las 
+                    supercomputadoras más rápidas de la actualidad utilizan estos procesadores, y los fabricantes de tarjetas gráficas 
+                    producen versiones de sus productos especializadas en acelerar los cálculos de propósito general.</p>
+                    
+                </font>  
+                </div>
+            
+
+            <!== Seccion del contacto =>
+            
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

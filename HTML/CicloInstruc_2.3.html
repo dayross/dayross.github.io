@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            El ciclo de instrucción
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> El Ciclo de Instrucción </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                    <p> Ciclo de la instrucción. </p>
+                    <p id="fetch-code" name="fetch-code"> El Ciclo Instrucción cuenta con dos fases, la primera es la obtención (búsqueda) y la segunda es la fase de ejecución: </p>
+                    
+                    <p> <font class=subtitulo>2.3.1 Ciclo Fetch-Decode-Execute. </font> </p>
+                    <p> Un ciclo de instrucción (también llamado ciclo de fetch-and-execute o ciclo de fetch-decode-execute en inglés) es el período que tarda la unidad central de procesamiento (CPU) en ejecutar una instrucción de lenguaje máquina. </p>
+                    <p id="segmentacion" name="segmentacion"> Comprende una secuencia de acciones determinada que debe llevar a cabo el CPU para ejecutar cada instrucción en un programa. Cada instrucción del juego de instrucciones de un CPU puede requerir diferente número de ciclos de instrucción para su ejecución. Un ciclo de instrucción está formado por uno o más ciclos máquina. Para que cualquier sistema de proceso de datos basado en microprocesador (por ejemplo un ordenador o computadora personal) o microcontrolador (por ejemplo un reproductor de MP3) realice una tarea (programa) primero debe buscar cada instrucción en la memoria principal y luego ejecutarla. </p>
+
+                    <p> <font class=subtitulo> 2.3.2 Segmentación de instrucciones.</font> </p>
+                    <p> El objetivo de la segmentación es ejecutar simultáneamente diferentes etapas de distintas instrucciones, lo cual permite aumentar el rendimiento del procesador sin tener que hacer más rápidas todas las unidades del procesador (ALU, UC, buses, etc.) y sin tener que duplicarlas. </p>
+                    <p> La división de la ejecución de una instrucción en diferentes etapas se debe realizar de tal manera que cada etapa tenga la misma duración, generalmente un ciclo de reloj.</p>
+                    <p> Es necesario añadir registros para almacenar los resultados intermedios entre las diferentes etapas, de modo que la información generada en una etapa esté disponible para la etapa siguiente.</p>
+                    <p> La segmentación es como una cadena de montaje. En cada etapa de la cadena se lleva a cabo una parte del trabajo total y cuando se acaba el trabajo de una etapa. </p>
+                    <p> El producto pasa a la siguiente y así sucesivamente hasta llegar al final. </p>
+                    <p id="conInst" name="conInst"> Si hay N etapas, se puede trabajar sobre N productos al mismo tiempo y, si la cadena está bien equilibrada, saldrá un producto acabado en el tiempo que se tarda en llevar a cabo una de las etapas. De esta manera, no se reduce el tiempo que se tarda en hacer un producto, sino que se reduce el tiempo total necesario para hacer una determinada cantidad de productos porque las operaciones de cada etapa se efectúan simultáneamente. </p>
+
+                    <p> <font class=subtitulo>2.3.3 Conjunto de instrucciones.</font></p>
+                    <p> La segmentación de instrucciones es similar al uso de una cadena de montaje en una fábrica de manufacturación. En las cadenas de montaje, el producto pasa a través de varias etapas de producción antes de tener el producto terminado. Cada etapa o segmento de la cadena está especializada en un área específica de la línea de producción y lleva a cabo siempre la misma actividad. Esta tecnología es aplicada en el diseño de procesadores eficientes. </p>
+                    <p> A estos procesadores se les conoce como pipeline processors. Estos están compuestos por una lista de segmentos lineales y secuenciales en donde cada segmento lleva a cabo una tarea o un grupo de tareas computacionales. Los datos que provienen del exterior se introducen en el sistema para ser procesados. </p>
+                    <p> La computadora realiza operaciones con los datos que tiene almacenados en memoria, produce nuevos datos o información para uso externo.</p>
+                    <p> Las arquitecturas y los conjuntos de instrucciones se pueden clasificar considerando aspectos posibles:</p>
+                    <ul>
+                    <li> Almacenamiento de operandos en la CPU: dónde se ubican los operandos aparte de la memoria.</li>
+                    <li> Número de operandos explícitos por instrucción: cuántos operandos se expresan en forma explícita en una instrucción típica. Como son 0,1,2,3. </li>
+                    <li> Posición del operando: Todos en los registros internos de la CPU. Cómo se especifica la dirección de memoria (modos de direccionamiento disponible.</li>
+                    <li> Operaciones: Qué operaciones están disponibles en el conjunto de instrucciones.</li>
+                    <li id="direc" name="direc"> Tipo y tamaño de operandos y cómo se especifican.</li>
+                    </ul>
+
+                    <p> <font class=subtitulo>2.3.4. Modos de direccionamiento.</font> </p>
+                    <p> Distintas formas que tiene la arquitectura para especificar la ubicación de los operandos. </p>
+                    <p> <font class=textoGral> Objetivos: </font> </p>
+                    <ul>
+                    <li>Reducir el número de bits para especificar un operando en memoria. - Dar soporte a las estructuras de datos de alto nivel. </li>
+                    <p> Pueden ser:</p>
+                    <ul>
+                    <li>Para datos, sobre los que opera la instrucción.</li>
+                    <li>Para instrucciones, especifica la dirección de la siguiente instrucción a ejecutar (en instrucciones de control).</li>
+                    </ul>
+                    </ul>
+
+                    <p> <font class=subtitulo>Formatos de direccionamiento</font></p>
+                    <p>Dónde puede estar un operando:</p>
+                    <ul>
+                    <li>En la propia instrucción</li>
+                    <li>En un registro </li>
+                    <li>En memoria</li>
+                    </ul>
+                        <center>
+                            <img src="../MEDIA/direc1.png" height="250">
+                        </center>
+                    <p> <font class=textoGral>Direccionamiento por registro.</font> </p>
+                    <p> El campo de dirección especifica un registro donde está el operando.</p>
+                    <center>
+                        <img src="../MEDIA/direcReg.png" height="250">
+                    </center>
+                    <p> <font class=textoGral>Direccionamiento Inmediato. </font> </p>
+                    <p> El operando está en la instrucción. </p>  
+                    <center>
+                        <img src="../MEDIA/direcImme.png" height="250">
+                    </center>
+                    <p> <font class=textoGral>Direccionamiento directo.</font> </p>
+                    <p> El campo de dirección contiene la dirección efectiva del operando. </p>
+                    <center>
+                        <img src="../MEDIA/direcDirec.png" height="250">
+                    </center>
+                    <p> <font class=textoGral>Direccionamiento indirecto por registro.</font></p>
+                    <p> Se especifica un registro donde está la dirección del operando.</p>
+                    <center>
+                        <img src="../MEDIA/direcIndir.png" height="250">
+                    </center>
+                    <p> <font class=textoGral>Direccionamiento indirecto por memoria.</font> </p>
+                    <p> El campo de direcciones contiene la dirección de una palabra donde está la dirección del operando. </p>
+                    <center>
+                        <img src="../MEDIA/direcIndirecMemo.png" height="250">
+                    </center>
+                    <p> <font class=textoGral>Direccionamiento base + desplazamiento.</font> </p>
+                    <p> Combina posibilidades del directo (facilidad de uso) y del indirecto por registro (menos bits para especificar dirección). Habrá que especificar un registro y un valor. La suma del contenido del registro y el valor es la dirección del operando. </p>
+                    <center>
+                        <img src="../MEDIA/direcDespla.png" height="250">
+                    </center>
+                    <p> <font class=textoGral>Direccionamiento indexado.</font> </p>
+                    <p> La dirección del operando es la suma de dos registros.</p>
+                    <center>
+                        <img src="../MEDIA/direcIndex.png" height="250">
+                    </center>
+                </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>

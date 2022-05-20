@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sistemas de memoria compartida
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    </head>
+    <body class="body_de_todos_los_temas">
+
+        <!== Seccion de barra de arriba =>
+        <nav class="barra">
+            <button class="bInicio arqui" type="button" onclick="document.location.href='../HTML/Inicio.html'">
+                    Inicio
+                </button>
+                <div class="drop">
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; Arquitectura de Computadoras <img src="../MEDIA/flechita.png" width="50px" height="20px"></p>
+                    <div class="caja" style="left:0">
+                        <a class="link" href="Inicio.html#u1">Unidad 1</a>
+                        <a class="link" href="Inicio.html#u2">Unidad 2</a>
+                        <a class="link" href="Inicio.html#u3">Unidad 3</a>
+                        <a class="link" href="Inicio.html#u4">Unidad 4</a>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="blackOverlay">
+            <!== titulo=>
+            <div class="centro">
+               <font class="titulo"> Sistemas de memoria compartida </font>
+            </div>
+
+            <!==subtitulo si acaso lo hay =>
+
+            <div class="desc">
+                <font class="textoUnidad">
+                <!== texto =>
+                <font class=textoGral>Sistemas de memoria compartida (multiprocesadores)</font>
+                <ul>
+                <li>Todos los procesadores acceden a una memoria común.</li>
+                <li>La comunicación entre procesadores se hace a través de la
+                memoria.
+                <li>Se necesitan primitivas de sincronismo para asegurar el
+                intercambio de datos.</li>
+                </ul>
+                
+                <p> <font class=textoGral>Estructura de los multiprocesadores de memoria compartida.</font> </p>
+                
+                <p>La mayoría de los multiprocesadores comerciales son del tipo UMA
+                (Uniform Memory Access): todos los procesadores tienen igual
+                tiempo de acceso a la memoria compartida. En la arquitectura UMA
+                los procesadores se conectan a la memoria a través de un bus, una
+                red multietapa o un conmutador de barras cruzadas (red multietapa o
+                un conmutador de barras cruzadas (crossbar crossbar) y disponen de
+                su propia ) y disponen de su propia memoria caché. Los
+                procesadores tipo NUMA (Non Uniform Memory Access) presentan
+                tiempos de acceso a la memoria compartida que dependen de la
+                ubicación del elemento de proceso y la memoria.</p>
+                <img id="interconex" src="../MEDIA/uma-numa.png" height="300">
+                
+                <p><font class=subtitulo id="medioComp">4.3.1 Redes de interconexión dinámica (indirecta)</font>.</p>
+                <p> <font class=textoGral>Medio compartido.</p>
+                <p>Conexión por bus compartido.</font></p>
+                <p>Es la organización más común en los computadores personales y
+                servidores.</p>
+                <p>El bus consta de líneas de dirección, datos y control para
+                implementar:</p>
+                <ul>
+                <li>El protocolo de transferencias de datos con la memoria.</li>
+                <li>El arbitraje del acceso al bus cuando más de un procesador
+                compite por utilizarlo.</li>
+                </ul>
+                <p>Los procesadores utilizan cachés locales para:</p>
+                <ul>
+                <li>Reducir el tiempo medio de acceso a memoria, como en un
+                monoprocesador.</li>
+                <li>Disminuir la utilización del bus compartido.</li>
+                </ul>
+                <img src="../MEDIA/memoComp.png">
+                
+                <p> <font class=textoGral>Protocolos de transferencia de ciclo partido.</font> </p>
+                <p>La operación de lectura se divide en dos transacciones no continuas
+                de acceso al bus. La primera es de petición de lectura que realiza el
+                máster (procesador) sobre el slave (memoria). Una vez realizada la
+                petición el máster abandona el bus. Cuando el slave dispone del dato
+                leído, inicia un ciclo de bus actuando como máster para enviar el
+                dato al antiguo máster, que ahora actúa como slave.</p>
+                <img src="../MEDIA/protocolo.png">
+                
+                <p><font class=textoGral> Protocolo de arbitraje distribuido.</font></p>
+                
+                <p>La responsabilidad del arbitraje se distribuye por los diferentes
+                procesadores conectados al bus.</p>
+                <img src="../MEDIA/arbitrajeDist.png">
+                <p>Arbitro-i concede el bus al procesador Pi activando Gi si:</p>
+                <ol>
+                <li>Pi ha activado su línea de petición de bus Ri.</li>
+                <li>La línea de ocupación está desactivada.</li>
+                <li>La línea de entrada de prioridad pi-1 está activada.</li>
+                </ol>
+                <p>El árbitro i activa su línea de prioridad pi si:</p>
+                <ol>
+                <li>Pi no ha activado su línea de petición Ri.</li>
+                <li id="conmu">La línea de prioridad pi-1 está activa.</li>
+                <li>Finaliza una operación de acceso al bus.</li>
+                </ol>
+                
+                <p> <font class=textoGral>Conmutadas.</p>
+                <p> Conexión por conmutadores crossbar.</font></p>
+                <p>Cada procesador (Pi) y cada módulo de memoria (Mi) tienen su
+                propio bus. Existe un conmutador (S) en los puntos de intersección
+                que permite conectar un bus de memoria con un bus de procesador.</p>
+                <p>Para evitar conflictos cuando más de un procesador pretende acceder
+                al mismo módulo de memoria se establece un orden de prioridad. Se
+                trata de una red sin bloqueo con una conectividad completa pero de
+                alta complejidad.</p>
+                <img src="../MEDIA/memoComp_conexConmu.png">
+                
+                <p> <font class=textoGral>Conexión por red multietapa.</font></p>
+                <ul>
+                <li>Representan una alternativa intermedia de conexión entre el
+                bus y el crossbar.</li>
+                <li>Es de menor complejidad que el crossbar pero mayor que el
+                bus simple.</li>
+                <li>La conectividad es mayor que la del bus simple pero menor
+                que la del crossbar.</li>
+                <li>Se compone de varias etapas alternativas de conmutadores
+                simples y redes de interconexión.</li>
+                </ul>
+                <img src="../MEDIA/redesMultietapa.png">
+                <p>En general las redes multietapa responden a este esquema.</p>
+                
+                </font>  
+            </div>
+
+
+            <!== Seccion del contacto =>
+            
+            <nav class="fondo">
+                <font class="textoClaro"> 
+                    Instituto Tecnológico de Saltillo  <br>
+                </font>
+
+                <font class="textoPequeño">
+                    Blvd. Venustiano Carranza #2400, Col. Tecnológico, Saltillo, Coahuila, México C.P. 25280. 
+                    <br>
+                    Contacto Email: contacto@tecnm.mx. 
+                    <br>
+                    Teléfono: 844 4020840.
+                    <br>
+                    <a href="https://www.facebook.com/TecNMcampusSaltillo/"><img src="../MEDIA/facebook.png" height="40px" width="40px"></a>
+                    <a href="http://its.mx"><img src="../MEDIA/web.jpg.png" height="45px" width="80px"></a>
+                </font>
+                    <br>
+                    <img src="../MEDIA/logoTec.png" height="50px" width="50px">
+            </nav>
+    </body>
+</html>
